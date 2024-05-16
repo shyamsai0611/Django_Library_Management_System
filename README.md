@@ -21,26 +21,24 @@ Make sure you have the following installed:
 - Django (3.2 or higher)
 - Git
 
-### Installation
 
-####1. Clone the repository:
-   
+Installation
+=============
+1. Clone the repository:
 git clone https://github.com/shyamsai0611/Django_Library_System.git
 cd your-repo-name
 
 
-####2. Apply the make migrations and migrate:
-
+2. Apply the make migrations and migrate:
 python manage.py makemigrations
 python manage.py migrate
 
-####3.Create a superuser:
 
+3. Create a superuser:
 python manage.py createsuperuser
 
 
-####4. Run the development server:
-
+4. Run the development server:
 python manage.py runserver
 
 Usage
