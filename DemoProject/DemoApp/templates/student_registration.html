@@ -1,0 +1,148 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Library Management System {% endblock %}
+{% block css %}
+<style>
+    footer {
+        padding: 20px 0px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 23px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+    .fa:hover {
+        opacity: 0.5;
+        text-decoration: none;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    .fa-whatsapp {
+        background: #25d366;
+        color: white;
+    }
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+        <br>
+        <h1 class="text-center"><u>Student Registration</u></h1>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">Username</i></label>
+            <input type="text" class="form-control mt-2" name="username" placeholder="Enter Username" required>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">First Name</i></label>
+            <input type="text" class="form-control mt-2" name="first_name" placeholder="Enter First Name" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Last Name</i></label>
+            <input type="text" class="form-control mt-2" name="last_name" placeholder="Enter Last Name" required>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Email</i></label>
+            <input type="email" class="form-control mt-2" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Mobile Number</i></label>
+            <input type="number" class="form-control mt-2" name="phone" id="phone" placeholder="Enter Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Branch Name</i></label>
+            <input type="text" class="form-control mt-2" name="branch" placeholder="Enter Branch Name" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Class Name</i></label>
+            <input type="text" class="form-control mt-2" name="classroom" placeholder="Enter Class Name" required>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Roll Number</i></label>
+            <input type="text" class="form-control mt-2" name="roll_no" placeholder="Enter Roll Number" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Student Image</i></label>
+            <input type="file" class="form-control mt-2" name="image" required>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Password</i></label>
+            <input type="password" class="form-control mt-2" name="password" placeholder="Enter Password" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label><i style="font-weight: bold;">Confirm Password</i></label>
+            <input type="password" class="form-control mt-2" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary mt-4 my-2">Register As Student</button>
+</div>
+</form>
+<footer>
+    <p>
+        <a href="https://facebook.com" class="fa fa-facebook"></a>
+        <a href="https://api.whatsapp.com" class="fa fa-whatsapp"></a>
+        <a href="https://instagram.com" class="fa fa-instagram"></a>
+        <a href="https://twitter.com" class="fa fa-twitter"></a>
+    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+                    <p>Made in India <br>
+                    Copyright &copy; Munna</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+{% block js %}
+<script>
+    {% if alert %}
+    alert("Registration Successfull.")
+    document.location = "/student_login"
+    {% endif %}
+
+    document.getElementById('phone').addEventListener('input', function() {
+        var maxLength = 10;
+        var phoneInput = document.getElementById('phone');
+        if (phoneInput.value.length > maxLength) {
+            phoneInput.value = phoneInput.value.slice(0, maxLength); // Trim to 10 digits
+        }
+    });
+
+</script>
+{% endblock %}
+
+
