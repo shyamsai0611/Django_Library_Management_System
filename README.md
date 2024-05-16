@@ -43,7 +43,7 @@ python manage.py migrate
 python manage.py createsuperuser
 
 
-5. Run the development server:
+4. Run the development server:
    
 python manage.py runserver
 
