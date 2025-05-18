@@ -54,6 +54,7 @@ Log in with the superuser account you created.
 Start managing your library resources.
 
 ### Project Structure
+```
 Django_Library_System/
 ├── library/           # Main Django project directory
 ├── library_app/       # Django app containing the core functionality
@@ -61,4 +62,5 @@ Django_Library_System/
 ├── static/            # Static files (CSS, JavaScript, images)
 ├── manage.py          # Django management script
 └── README.md          # Project documentation
+```
 
