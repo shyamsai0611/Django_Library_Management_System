@@ -11,7 +11,7 @@ A web-based library management system built with Django. This project aims to pr
 - Manage authors (add, update, delete)  
 - Issue and return books  
 - Search functionality for books and authors  
-- Responsive design  
+- Responsive design
 
 ---
 
@@ -23,7 +23,7 @@ Make sure you have the following installed:
 
 - Python (3.8 or higher)  
 - Django (3.2 or higher)  
-- Git  
+- Git 
 
 ### Installation
 
