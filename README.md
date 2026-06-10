@@ -1,6 +1,6 @@
 # Django Library System
 
-A web-based library management system built with Django. This project aims to provide a user-friendly interface for managing library resources, including books, authors, and borrowers.
+A web-based library management system built with Django. This project aims to provide a user-friendly interface for managing library resources, including books, authors, and borrowers.    
 
 ---
 
